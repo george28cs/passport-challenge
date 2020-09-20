@@ -20,7 +20,7 @@ passport.use(
           return cb(boom.unauthorized(), false)
         }
 
-        delete user.passport
+        delete user.password
 
         cb(null, { ...user, scopes: tokenPayload.scopes })
       } catch (error) {
